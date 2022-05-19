@@ -10,7 +10,7 @@ IIS is built with Python, Selenium, and BeautifulSoup4. (Created to practice Sel
 ![img.png](img.png)
 
 1. Download ZIP
-2. Download appropriate ChromeDriver that matches your Chrome version and move it to the root folder
+2. Download appropriate ChromeDriver that matches your Chrome version and move it to the root folder https://chromedriver.chromium.org/downloads
 3. Open instagramCrawl.py with any editor or IDE and run it
 4. Enter the information requested to start Scraping!
 
