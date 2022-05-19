@@ -34,7 +34,13 @@ Version 0.0.1 (2022-05-19) - Project Launch
  
 ## Credits
  
-Developer - Eric Park (Bokdol11859)
+Developer - Eric Park (Bokdol11859) 
+
+## Contact
+
+2019147551@yonsei.ac.kr
+
+Feel free to contact me if any issues have been found or if any new functions are required. 
 
  
 ## License
