@@ -1,6 +1,6 @@
 # Instagram Image Scraper
  
-Instagram Image Scraper (IIS) is a program created to save public images of an Instagram account. 
+Instagram Image Scraper (IIS) is a program created to save images of public Instagram accounts. 
 
 IIS is built with Python, Selenium, and BeautifulSoup4.
 
@@ -14,11 +14,11 @@ IIS is built with Python, Selenium, and BeautifulSoup4.
 3. Open instagramCrawl.py with any editor or IDE and run it
 4. Enter the information requested to start Scraping!
 
-Use It At Your Own Risk!
+### Use It At Your Own Risk!
  
 ## Usage
  
-IIS scrapes the main images (first image if there's multiple) of the posts of a public Instagram account.
+IIS scrapes the main images (the first image if there's multiple) of the posts of a public Instagram account.
 
 ## Contributing
  
