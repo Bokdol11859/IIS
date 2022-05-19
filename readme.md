@@ -16,7 +16,7 @@ IIS is built with Python, Selenium, and BeautifulSoup4.
 3. Open instagramCrawl.py with any editor or IDE and run it
 4. Enter the information requested to start Scraping!
 
-##Use It At Your Own Risk!
+Use It At Your Own Risk!
  
 ## Usage
  
