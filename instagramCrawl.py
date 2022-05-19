@@ -1,17 +1,28 @@
 from selenium import webdriver
 import time
-import requests
 from bs4 import BeautifulSoup
 import os
 import urllib.request
 import ssl
+
 ssl._create_default_https_context = ssl._create_unverified_context
 
+usrnme = input("Instagram account ID: ")
+pswd = input("Instagram account PW: ")
 
-username = "crawltest1234"
-password = "eric8801"
+target = []
+
+while True:
+    tgt = input("Please enter the target ID (Enter F to stop): ")
+    if tgt.lower() != 'f':
+        target.append(tgt)
+    else:
+        break
+
+username = usrnme
+password = pswd
 driver_path = '.\chromedriver.exe'
-target = ['_00_1102']
+
 
 
 options = webdriver.ChromeOptions()
@@ -21,7 +32,10 @@ options = webdriver.ChromeOptions()
 
 driver = webdriver.Chrome(driver_path,options=options)
 
-# os.makedirs(f'./instaImages')
+try:
+    os.makedirs(f'./instaImages')
+except:
+    print("Main folder already exists")
 
 time.sleep(2)
 ## url에 접근한다.
@@ -37,7 +51,11 @@ for targ in target:
     driver.get(f'https://www.instagram.com/{targ}/')
     last_height = driver.execute_script("return document.body.scrollHeight")
     images = []
-    os.makedirs(f'./instaImages/{targ}')
+    try:
+        os.makedirs(f'./instaImages/{targ}')
+    except:
+        print(f"{targ} folder already exists")
+
     count = 0
     while True:
         driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
@@ -64,8 +82,12 @@ for targ in target:
             images.append(i['src'])
             urllib.request.urlretrieve(i['src'], f'./instaImages/{targ}/{count}.jpg')
             count += 1
-    print(f'{targ}: {len(images)}')
-    # input()
+    if count == 0:
+        print(f'Account {targ} is private')
+    else:
+        print(f'{targ}: {len(images)}')
+
+
 
 
 
