@@ -2,7 +2,7 @@
  
 Instagram Image Scraper (IIS) is a program created to save public images of an Instagram account. 
 
-IIS is built with Python, Selenium, and BeautifulSoup4. (Created to practice Selenium)
+IIS is built with Python, Selenium, and BeautifulSoup4.
 
  
 ## Installation
